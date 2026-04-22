@@ -1,6 +1,6 @@
 module.exports = async ({ github, context }) => {
-  const org = 'tiendas-3b';
-  const projectNumber = 6;
+  const org = 'vdelrazo';
+  const projectNumber = 1;
 
   // ─── IDs de campos custom (generados por create-project-fields.js) ───────────
   const INICIATIVA_FIELD_ID = 'PVTSSF_lAHOAPe-kM4BUpLnzhQxQLo';
