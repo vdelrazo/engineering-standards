@@ -1,0 +1,77 @@
+[
+  {
+    "name": "iniciativa:orders-api-platform",
+    "color": "B60205",
+    "description": "Orders API Platform"
+  },
+  {
+    "name": "iniciativa:venta-financiada",
+    "color": "E4E669",
+    "description": "Venta Financiada Avafin"
+  },
+  {
+    "name": "iniciativa:migracion-celex",
+    "color": "B60205",
+    "description": "Migración CELEX"
+  },
+  {
+    "name": "iniciativa:kiosko-remesas",
+    "color": "F9D0C4",
+    "description": "Kiosko Remesas"
+  },
+  {
+    "name": "iniciativa:cico-mercado-pago",
+    "color": "0E8A16",
+    "description": "CICO Mercado Pago"
+  },
+  {
+    "name": "iniciativa:conciliacion",
+    "color": "1D76DB",
+    "description": "Conciliación TAE/PDS/Remesas/MercadoPago"
+  },
+  {
+    "name": "iniciativa:kmp-kotlin-app",
+    "color": "5319E7",
+    "description": "KMP Kotlin App"
+  },
+  {
+    "name": "type:feature",
+    "color": "0075CA",
+    "description": "Nueva funcionalidad"
+  },
+  {
+    "name": "type:fix",
+    "color": "D93F0B",
+    "description": "Corrección de bug"
+  },
+  {
+    "name": "type:chore",
+    "color": "E4E669",
+    "description": "Mantenimiento / infra / config"
+  },
+  {
+    "name": "type:docs",
+    "color": "0075CA",
+    "description": "Documentación"
+  },
+  {
+    "name": "priority:high",
+    "color": "B60205",
+    "description": "Alta prioridad"
+  },
+  {
+    "name": "priority:medium",
+    "color": "FBCA04",
+    "description": "Prioridad media"
+  },
+  {
+    "name": "priority:low",
+    "color": "0E8A16",
+    "description": "Baja prioridad"
+  },
+  {
+    "name": "status:blocked",
+    "color": "B60205",
+    "description": "Bloqueado — depende de algo externo"
+  }
+]
