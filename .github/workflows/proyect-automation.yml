@@ -1,0 +1,61 @@
+# Reusable workflow — Project Automation
+# Mueve issues y PRs en el GitHub Project según eventos del repo.
+#
+# Llamarlo desde cada repo con:
+#
+#   jobs:
+#     automate:
+#       uses: tiendas-3b/ffss-engineering-standards/.github/workflows/project-automation.yml@main
+#       secrets:
+#         PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+
+name: Project Automation (reusable)
+
+on:
+  workflow_call:
+    secrets:
+      PROJECT_TOKEN:
+        required: true
+
+jobs:
+  move-to-review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout ffss-engineering-standards
+        uses: actions/checkout@v4
+        with:
+          repository: tiendas-3b/ffss-engineering-standards
+          token: ${{ secrets.PROJECT_TOKEN }}
+          path: standards
+
+      - name: Move PR to En review
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PROJECT_TOKEN }}
+          script: |
+            const script = require('./standards/.github/scripts/move-to-review.js')
+            await script({ github, context })
+
+  move-to-dev:
+    if: github.event_name == 'create' && github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout ffss-engineering-standards
+        uses: actions/checkout@v4
+        with:
+          repository: tiendas-3b/ffss-engineering-standards
+          token: ${{ secrets.PROJECT_TOKEN }}
+          path: standards
+
+      - name: Move issue to En desarrollo
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PROJECT_TOKEN }}
+          script: |
+            const script = require('./standards/.github/scripts/move-to-dev.js')
+            await script({ github, context })
