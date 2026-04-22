@@ -27,7 +27,7 @@ jobs:
       - name: Checkout ffss-engineering-standards
         uses: actions/checkout@v4
         with:
-          repository: tiendas-3b/ffss-engineering-standards
+          repository: vdelrazo/engineering-standards
           token: ${{ secrets.PROJECT_TOKEN }}
           path: standards
 
@@ -48,7 +48,7 @@ jobs:
       - name: Checkout ffss-engineering-standards
         uses: actions/checkout@v4
         with:
-          repository: tiendas-3b/ffss-engineering-standards
+          repository: vdelrazo/engineering-standards
           token: ${{ secrets.PROJECT_TOKEN }}
           path: standards
 
